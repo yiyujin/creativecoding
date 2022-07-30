@@ -33,6 +33,7 @@ const s2 = ( c ) => {
 
   c.setup = () => {
     c.createCanvas(180, 320);
+    c.pixelDensity(1) //mobile
   };
 
   c.draw = () => {
@@ -60,6 +61,7 @@ const s3 = ( c ) => {
 
   c.setup = () => {
     c.createCanvas(180, 320);
+    c.pixelDensity(1) //mobile
   };
 
   c.draw = () => {
@@ -89,6 +91,7 @@ const s4 = ( c ) => {
     t = 0;
 
     c.createCanvas(180, 320);
+    c.pixelDensity(1) //mobile
   }
   
 
@@ -113,6 +116,7 @@ const s5 = ( c ) => {
 
   c.setup = () => {
     c.createCanvas(180, 320);
+    c.pixelDensity(1) //mobile
   };
 
   c.draw = () => {
@@ -151,6 +155,7 @@ const b1 = ( c ) => {
 
   c.setup = () => {
     c.createCanvas(180, 320);
+    c.pixelDensity(1) //mobile
 
     for(i = 0; i < ballCount; i++){
       x[i] = c.width/2
@@ -209,6 +214,7 @@ const b2 = ( c ) => {
 
   c.setup = () => {
     c.createCanvas(180, 320);
+    c.pixelDensity(1) //mobile
 
     for(i = 0; i < ballCount; i++){
       x[i] = c.width/2
@@ -263,6 +269,7 @@ const b3 = ( c ) => {
 
   c.setup = () => {
     c.createCanvas(180, 320);
+    c.pixelDensity(1) //mobile
 
     for(i = 0; i < ballCount; i++){
       x[i] = c.width/2
@@ -312,6 +319,7 @@ const t1 = ( c ) => {
 
   c.setup = () => {
     c.createCanvas(180, 320);
+    c.pixelDensity(1) //mobile
     c.noStroke()
 
 
@@ -343,6 +351,7 @@ const t1 = ( c ) => {
 const t2 = ( c ) => {
   c.setup = () => {
     c.createCanvas(180, 320);
+    c.pixelDensity(1) //mobile
     c.noStroke()
 
 
