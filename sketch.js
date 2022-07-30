@@ -4,6 +4,8 @@ const s1 = ( c ) => {
   let y = 40;
   let speed = 3;
 
+  c.pixelDensity(1)
+
   c.setup = () => {
     c.createCanvas(180, 320);
   };
