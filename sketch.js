@@ -2,7 +2,7 @@ const s1 = ( c ) => {
 
   let x = 0;
   let y = 40;
-  let speed = 3;
+  let speed = 5;
 
   c.pixelDensity(1) //mobile
 
@@ -29,7 +29,7 @@ const s1 = ( c ) => {
 const s2 = ( c ) => {
 
   let y = - 40;
-  let speed = 3;
+  let speed = 5;
 
   c.setup = () => {
     c.createCanvas(180, 320);
@@ -56,8 +56,8 @@ const s3 = ( c ) => {
   let x = 40
   let y = 40
   let r = 80
-  let xSpeed = 3
-  let ySpeed = 3
+  let xSpeed = 5
+  let ySpeed = 5
 
   c.setup = () => {
     c.createCanvas(180, 320);
@@ -104,7 +104,7 @@ const s4 = ( c ) => {
     x = c.width * c.noise(t + 20)
     y = c.height * c.noise(t + 5)
 
-    t += 0.005;
+    t += 0.01;
 
   };
 };
@@ -112,7 +112,7 @@ const s4 = ( c ) => {
 const s5 = ( c ) => {
 
   let x = - 40;
-  let speed = 3;
+  let speed = 5;
 
   c.setup = () => {
     c.createCanvas(180, 320);
@@ -161,8 +161,8 @@ const b1 = ( c ) => {
       x[i] = c.width/2
       y[i] = c.height/2
 
-      xSpeed[i] = c.random(-3, 3)
-      ySpeed[i] = c.random(-3, 3)
+      xSpeed[i] = c.random(-5, 5)
+      ySpeed[i] = c.random(-5, 5)
 
       size[i] = c.random(10,50)
 
@@ -324,7 +324,7 @@ const t1 = ( c ) => {
 
 
     fade = 0;
-    fadeAmount = 3;
+    fadeAmount = 5;
   };
 
   c.draw = () => {
@@ -334,7 +334,7 @@ const t1 = ( c ) => {
     c.circle(c.width/2, c.height/2, 80)
 
     if(fade < 0){
-      fadeAmount = 3;
+      fadeAmount = 5;
     }
     
     if (fade > 255){
@@ -393,7 +393,7 @@ const t3 = ( c ) => {
   c.draw = () => {
     c.fill(c.lerpColor(startColor, newColor, amt))
 
-    amt += 0.02;
+    amt += 0.05;
 
     if(amt >= 1){
       amt = 0;
