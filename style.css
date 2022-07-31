@@ -34,6 +34,7 @@ canvas {
 }
 
 .title{
+  font-size: 32px;
   margin-left: 4%;
   font-weight: 400;
 
@@ -47,7 +48,7 @@ canvas {
 
 #title1{
   /* color: rgba(255,255,255,0 */
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .oneCard{
