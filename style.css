@@ -4,8 +4,8 @@ html, body {
 
 
   font-family: 'Helvetica';
-  font-weight: 100;
-  color: white;
+  /* font-weight: 100; */
+  color: orangered;
 
   background-color: black;
 }
@@ -28,11 +28,28 @@ canvas {
   width: 180px;
   height: 320px;
 
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.16);
   /* background-color: grey; */
   margin: 4px;
 }
 
-#title{
+.title{
   margin-left: 4%;
+  font-weight: 400;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#title{
+  /* color: orangered; */
+}
+
+#title1{
+  /* color: rgba(255,255,255,0 */
+  opacity: 0.3;
+}
+
+.oneCard{
+  width: 100%;
 }
