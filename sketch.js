@@ -1,3 +1,12 @@
+const canvasW = 180
+const canvasH = 320
+
+//color google
+
+google = ['#4285F4', '#DB4437', '#F4B400', '#0F9D58']
+
+samsung = ['#63C97C', '#6F6FED', '#68BACC', '#E96146', '#DA354B', '#F5C344']
+
 const s1 = ( c ) => {
 
   let x = 0;
@@ -7,7 +16,7 @@ const s1 = ( c ) => {
   c.pixelDensity(1) //mobile
 
   c.setup = () => {
-    c.createCanvas(180, 320);
+    c.createCanvas(canvasW, canvasH);
     c.pixelDensity(1) //mobile
   };
 
@@ -25,14 +34,13 @@ const s1 = ( c ) => {
     y += speed
   };
 };
-
 const s2 = ( c ) => {
 
   let y = - 40;
   let speed = 5;
 
   c.setup = () => {
-    c.createCanvas(180, 320);
+    c.createCanvas(canvasW, canvasH);
     c.pixelDensity(1) //mobile
   };
 
@@ -60,7 +68,7 @@ const s3 = ( c ) => {
   let ySpeed = 5
 
   c.setup = () => {
-    c.createCanvas(180, 320);
+    c.createCanvas(canvasW, canvasH);
     c.pixelDensity(1) //mobile
   };
 
@@ -135,7 +143,7 @@ const s5 = ( c ) => {
 };
 
 
-const b1 = ( c ) => {
+const s6 = ( c ) => {
 
   let ballCount = 20;
   let x = [];
@@ -149,9 +157,6 @@ const b1 = ( c ) => {
   let b = [];
 
   let sysColor = [];
-
-  palette = ['#4285F4', '#DB4437', '#F4B400', '#0F9D58']
-
 
   c.setup = () => {
     c.createCanvas(180, 320);
@@ -170,7 +175,7 @@ const b1 = ( c ) => {
       g[i] = c.random(0,255)
       b[i] = c.random(0,255)
 
-      sysColor[i] = c.random(palette)
+      sysColor[i] = c.random(google)
     }
   };
 
@@ -197,7 +202,66 @@ const b1 = ( c ) => {
   };
 };
 
-const b2 = ( c ) => {
+const s6a = ( c ) => {
+
+  let ballCount = 20;
+  let x = [];
+  let y = [];
+
+  let xSpeed = [];
+  let ySpeed =[];
+  let size = [];
+  let r = [];
+  let g = [];
+  let b = [];
+
+  let sysColor = [];
+
+  c.setup = () => {
+    c.createCanvas(180, 320);
+    c.pixelDensity(1) //mobile
+
+    for(i = 0; i < ballCount; i++){
+      x[i] = c.width/2
+      y[i] = c.height/2
+
+      xSpeed[i] = c.random(-5, 5)
+      ySpeed[i] = c.random(-5, 5)
+
+      size[i] = c.random(10,50)
+
+      r[i] = c.random(0,255)
+      g[i] = c.random(0,255)
+      b[i] = c.random(0,255)
+
+      sysColor[i] = c.random(samsung)
+    }
+  };
+
+  c.draw = () => {
+    c.background(0,0,0,90)
+    c.noStroke()
+
+    for(i = 0; i < ballCount; i++){
+      x[i] += xSpeed[i]
+      y[i] += ySpeed[i]
+
+      if(x[i] < size[i]/2 || x[i] > c.width - size[i]/2){
+        xSpeed[i] *= -1
+      }
+
+      if(y[i] < size[i]/2 || y[i] > c.height - size[i]/2){
+        ySpeed[i] *= -1
+      }
+
+      c.fill(sysColor[i])
+      c.circle(x[i], y[i], size[i])
+    }
+
+  };
+};
+
+const s7 = ( c ) => {
 
   let ballCount = 50;
   let x = [];
@@ -250,7 +314,7 @@ const b2 = ( c ) => {
   };
 };
 
-const b3 = ( c ) => {
+const s8 = ( c ) => {
 
   let ballCount = 100;
   let x = [];
@@ -285,9 +349,7 @@ const b3 = ( c ) => {
       g[i] = c.random(150,255)
       b[i] = c.random(0,50)
 
-      palette = ['#4285F4', '#DB4437', '#F4B400', '#0F9D58']
-
-      sysColor[i] = c.random(palette)
+      sysColor[i] = c.random(google)
     }
   };
 
@@ -314,7 +376,7 @@ const b3 = ( c ) => {
   };
 };
 
-const t1 = ( c ) => {
+const s9 = ( c ) => {
 
 
   c.setup = () => {
@@ -348,7 +410,7 @@ const t1 = ( c ) => {
   };
 };
 
-const t2 = ( c ) => {
+const s10 = ( c ) => {
   c.setup = () => {
     c.createCanvas(180, 320);
     c.pixelDensity(1) //mobile
@@ -377,10 +439,10 @@ const t2 = ( c ) => {
   };
 };
 
-const t3 = ( c ) => {
+const s11 = ( c ) => {
 
   startColor = c.color(255,255,255)
-  newColor = c.color(c.random(palette))
+  newColor = c.color(c.random(google))
   amt = 0;
 
   c.setup = () => {
@@ -398,33 +460,28 @@ const t3 = ( c ) => {
     if(amt >= 1){
       amt = 0;
       startColor = newColor;
-      newColor = c.color(c.random(palette))
+      newColor = c.color(c.random(google))
     }
 
     c.circle(c.width/2,c.height/2,80)
   };
 };
 
+// assign to div
+new p5(s1, 's1');
+new p5(s2, 's2');
+new p5(s3, 's3');
+new p5(s4, 's4');
+new p5(s5, 's5');
+new p5(s6, 's6');
+new p5(s6a, 's6a');
+new p5(s7, 's7');
+new p5(s8, 's8');
+new p5(s9, 's9');
+new p5(s10, 's10');
+new p5(s11, 's11');
 
 
-//assign to div
-card1 = new p5(s1, '1.1');
-card2 = new p5(s2, '1.2');
-card3 = new p5(s3, '1.3');
-card3 = new p5(s4, '1.4');
-card3 = new p5(s5, '1.5');
-
-new p5(b1, '2.1');
-new p5(b1, '2.2');
-new p5(b1, '2.3');
-new p5(b2, '2.4');
-new p5(b3, '2.5');
-
-new p5(t1, '3.1')
-new p5(t2, '3.2')
-new p5(t3, '3.3')
-
-//
 
 //
 const sample = ( c ) => {

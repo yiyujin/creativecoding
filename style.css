@@ -1,5 +1,11 @@
+@media screen and (max-width: 500px) {
+  .card{
+    width:33%;
+  }
+}
+
 html, body {
-  margin: 0;
+  margin: 0px;
   padding: 0;
 
 
@@ -7,35 +13,37 @@ html, body {
   /* font-weight: 100; */
   color: orangered;
 
-  background-color: black;
+  background-color: #f6f6f6;
 }
 
 canvas {
   display: block;
 }
 
-.row{
+.cardContainer{
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
-#row2{
-  margin-left: 180px;
-}
-
 .card{
-  width: 180px;
-  height: 320px;
 
-  border: 1px solid rgba(255,255,255,0.16);
+  /* margin: auto; */
+  /* margin-right: 0.5px; */
+
+  /* width: 180px;
+  height: 320px; */
+
+  background-color: black;
+
+  border: 0.001em solid white;
+
+  /* border: 0.5px solid rgba(255,255,255,0.2); */
   /* background-color: grey; */
-  margin: 4px;
+  /* margin: 4px; */
 }
 
 .title{
   font-size: 32px;
-  margin-left: 4%;
   font-weight: 400;
 
   margin-top: 0;
