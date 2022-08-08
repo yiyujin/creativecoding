@@ -26,23 +26,10 @@ canvas {
 }
 
 .card{
-
-  /* margin: auto; */
-  /* margin-right: 0.5px; */
-
-  /* width: 180px;
-  height: 320px; */
-
   margin-right: 1px;
   margin-bottom: 1px;
 
   background-color: black;
-
-  /* border: 1px solid white; */
-
-  /* border: 0.5px solid rgba(255,255,255,0.2); */
-  /* background-color: grey; */
-  /* margin: 4px; */
 }
 
 .title{
@@ -53,15 +40,7 @@ canvas {
   margin-bottom: 0;
 }
 
-#title{
-  /* color: orangered; */
-}
-
 #title1{
   /* color: rgba(255,255,255,0 */
   opacity: 0.5;
-}
-
-.oneCard{
-  width: 100%;
 }
